@@ -26,23 +26,10 @@ function Form() {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    const { namejob, checked } = e.target;
-    const newNganhDangKy = [...formData.nganhhoc];
-
-    if (checked) {
-      newNganhDangKy.push(namejob);
-    } else {
-      const index = newNganhDangKy.indexOf(namejob);
-      newNganhDangKy.splice(index, 1);
-    }
-    setFormData({
+  setFormData({
       ...formData,
-      [name]: value,
-      nganhhoc: newNganhDangKy 
-    });
-
-
-    
+      [name]: value
+  });
   };
 
   const handleSubmit = async (e) => {
@@ -267,64 +254,64 @@ function Form() {
               <h1 style={{color:"red"}} >NGÀNH ĐĂNG KÝ XÉT TUYỂN</h1>
               <ul className='red-text'>
             <li>
-              <input type="checkbox" name="nganhhoc" value="Digital Marketing" onChange={handleChange} />
-              Digital Marketing
+              <input type="radio" id="nganhhoc" name="nganhhoc" value="Digital Marketing" onChange={handleChange} checked={formData.nganhhoc === "Digital Marketing"} />
+              Digital Marketing{" "}
             </li>
             <li>
-              <input type="checkbox" name="nganhhoc" value="Quản trị khách sạn" onChange={handleChange} />
-              Quản trị khách sạn
+              <input type="radio" name="nganhhoc" value="Quản trị khách sạn" onChange={handleChange} checked={formData.nganhhoc === "Quản trị khách sạn"} />
+              Quản trị khách sạn{" "}
             </li>
             <li>
-              <input type="checkbox" name="nganhhoc" value="Phiên dịch tiếng Anh thương mại" onChange={handleChange} />
-              Phiên dịch tiếng Anh thương mại
+              <input type="radio" name="nganhhoc" value="Phiên dịch tiếng Anh thương mại" onChange={handleChange} checked={formData.nganhhoc === "Phiên dịch tiếng Anh thương mại"} />
+              Phiên dịch tiếng Anh thương mại{" "}
             </li>
             <li>
-              <input type="checkbox" name="nganhhoc" value="CNTT-Ứng dụng phần mềm" onChange={handleChange} />
-              CNTT-Ứng dụng phần mềm
+              <input type="radio" name="nganhhoc" value="CNTT-Ứng dụng phần mềm" onChange={handleChange} checked={formData.nganhhoc === "CNTT-Ứng dụng phần mềm"} />
+              CNTT-Ứng dụng phần mềm{" "}
             </li>
             <li>
-              <input type="checkbox" name="nganhhoc" value="Tiếng Hàn" onChange={handleChange} />
-              Tiếng Hàn
+              <input type="radio" name="nganhhoc" value="Tiếng Hàn" onChange={handleChange} checked={formData.nganhhoc === "Tiếng Hàn"} />
+              Tiếng Hàn{" "}
             </li>
             <li>
-              <input type="checkbox" name="nganhhoc" value="Chăm sóc sắc đẹp" onChange={handleChange} />
-              Chăm sóc sắc đẹp
+              <input type="radio" name="nganhhoc" value="Chăm sóc sắc đẹp" onChange={handleChange} checked={formData.nganhhoc === "Chăm sóc sắc đẹp"} />
+              Chăm sóc sắc đẹp{" "}
             </li>
             <li>
-              <input type="checkbox" name="nganhhoc" value="Tài chính đầu tư" onChange={handleChange} />
-              Tài chính đầu tư
+              <input type="radio" name="nganhhoc" value="Tài chính đầu tư" onChange={handleChange} checked={formData.nganhhoc === "Tài chính đầu tư"}/>
+              Tài chính đầu tư{" "}
             </li>
             <li>
-              <input type="checkbox" name="nganhhoc" value="Công nghệ ô tô" onChange={handleChange} />
-              Công nghệ ô tô
+              <input type="radio" name="nganhhoc" value="Công nghệ ô tô" onChange={handleChange} checked={formData.nganhhoc === "Công nghệ ô tô"}/>
+              Công nghệ ô tô{" "}
             </li>
             <li>
-              <input type="checkbox" name="nganhhoc" value="Thiết kế đồ họa" onChange={handleChange} />
-              Thiết kế đồ họa
+              <input type="radio" name="nganhhoc" value="Thiết kế đồ họa" onChange={handleChange} checked={formData.nganhhoc === "Thiết kế đồ họa"}/>
+              Thiết kế đồ họa{" "}
             </li>
             <li>
-              <input type="checkbox" name="nganhhoc" value="Quản trị bán hàng" onChange={handleChange} />
-              Quản trị bán hàng
+              <input type="radio" name="nganhhoc" value="Quản trị bán hàng" onChange={handleChange} checked={formData.nganhhoc === "Quản trị bán hàng"}/>
+              Quản trị bán hàng{" "}
             </li>
             <li>
-              <input type="checkbox" name="nganhhoc" value="Quản trị doanh nghiệp" onChange={handleChange} />
-              Quản trị doanh nghiệp
+              <input type="radio" name="nganhhoc" value="Quản trị doanh nghiệp" onChange={handleChange}checked={formData.nganhhoc === "Quản trị doanh nghiệp"} />
+              Quản trị doanh nghiệp{" "}
             </li>
             <li>
-              <input type="checkbox" name="nganhhoc" value="Quản lý công nghiệp" onChange={handleChange} />
-              Quản lý công nghiệp
+              <input type="radio" name="nganhhoc" value="Quản lý công nghiệp" onChange={handleChange} checked={formData.nganhhoc === "Quản lý công nghiệp"}/>
+              Quản lý công nghiệp{" "}
             </li>
             <li>
-              <input type="checkbox" name="nganhhoc" value="Tiếng Nhật" onChange={handleChange} />
-              Tiếng Nhật
+              <input type="radio" name="nganhhoc" value="Tiếng Nhật" onChange={handleChange} checked={formData.nganhhoc === "Tiếng Nhật"}/>
+              Tiếng Nhật{" "}
             </li>
             <li>
-              <input type="checkbox" name="nganhhoc" value="logistics" onChange={handleChange} />
-              logistics
+              <input type="radio" name="nganhhoc" value="logistics" onChange={handleChange} checked={formData.nganhhoc === "logistics"}/>
+              logistics{" "}
             </li>
             <li>
-              <input type="checkbox" name="nganhhoc" value="Tiếng Trung" onChange={handleChange} />
-              Tiếng Trung
+              <input type="radio" name="nganhhoc" value="Tiếng Trung" onChange={handleChange} checked={formData.nganhhoc === "Tiếng Trung"}/>
+              Tiếng Trung{" "}
             </li>
             </ul>
     </div>
@@ -339,65 +326,3 @@ function Form() {
 
 export default Form;
 
-const nganhHocList = [
-  {
-maNganh: "digital-marketing",
-    tenNganh: "Digital Marketing",
-  },
-  {
-    maNganh: "thiet-ke-do-hoa",
-    tenNganh: "Thiết kế đồ họa",
-  },
-  {
-    maNganh: "quan-tri-khach-san",
-  tenNganh: "Quản trị khách sạn",
-},
-{
-  maNganh: "quan-tri-ban-hang",
-tenNganh: "Quản trị bán hàng",
-},
-{
-  maNganh: "phien-dich",
-tenNganh: "Phiên dịch Tiếng Anh thương mại",
-},
-{
-  maNganh: "quan-tri-doanh-nghiep",
-  tenNganh: "Quản trị doanh nghiệp",
-},
-{
-  maNganh: "UDPM",
-tenNganh: "CNTT - Ứng dụng phần mềm ",
-},
-{
-  maNganh: "quan-ly-cong-nghiep",
-tenNganh: "Quản lý công nghiệp",
-},
-{
-  maNganh: "Han",
-tenNganh: "Tiếng Hàn",
-},
-{
-  maNganh: "Nhat",
-tenNganh: "Tiếng Nhật",
-},
-{
-  maNganh: "CSSD",
-tenNganh: "Chăm sóc sắc đẹp",
-},
-{
-  maNganh: "Logistics",
-tenNganh: "Logistics",
-},
-{
-  maNganh: "tai-chinh",
-tenNganh: "Tài chính đầu tư",
-},
-{
-  maNganh: "Trung",
-tenNganh: "Tiếng Trung",
-},
-{
-  maNganh: "CNOT",
-tenNganh: "Công nghệ ô tô",
-},
-];
